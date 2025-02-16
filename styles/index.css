@@ -39,12 +39,12 @@
 
     Fonts are obtained from https://fonts.google.com/.
   */
-  --rampart-one: Rampart One, sans-serif;
+  --ms-madi: Ms Madi, sans-serif;
   --lexend: Lexend, sans-serif;
   --poppins: Poppins, sans-serif;
   --jetbrains-mono: Jetbrains Mono, sans-serif;
 
-  --font-logo: var(--rampart-one);
+  --font-logo: var(--ms-madi);
   --font-copy: var(--lexend);
   --font-head: var(--poppins);
   --font-code: var(--jetbrains-mono);

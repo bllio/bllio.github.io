@@ -168,6 +168,35 @@ html {
   color: var(--color-brand-secondary);
 }
 
+/* Navigation Bar */
+.navbar {
+  width: 30%;
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+
+.navbar__link {
+  color: var(--color-brand-primary);
+  display: block;
+  font-family: var(--font-copy);
+  font-weight: var(--text-semibold);
+  padding: var(--space-sm);
+  padding-left: 0;
+  text-decoration: none;
+  transition: color 150ms ease-out;
+}
+
+.navbar__link:hover {
+  color: var(--color-brand-secondary);
+}
+
 /* Text */
 .text {
   color: var(--color-ink-primary);

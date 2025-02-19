@@ -133,7 +133,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
-  margin-bottom: var(--space-4xl);
+  margin-bottom: var(--space-6xl);
   width: 100%;
 }
 

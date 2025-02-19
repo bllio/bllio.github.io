@@ -225,6 +225,47 @@ html {
   margin-top: var(--space-7xl);
 }
 
+.section__head {
+  color: var(--color-ink-accent);
+  column-gap: var(--space-sm);
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-family: var(--font-head);
+  font-size: var(--text-head);
+  margin-bottom: var(--space-lg);
+  transition: color 150ms ease-out;
+  width: 25%;
+}
+
+.section__head:hover {
+  color: var(--color-brand-primary);
+}
+
+/* URL Fragment */
+.url-fragment {
+  display: inline-block;
+}
+
+.url-fragment__inner {
+  cursor: pointer;
+  display: inline-block;
+  opacity: 0%;
+  transform: rotate(-45deg);
+  transition: opacity 200ms ease-out;
+  transition-delay: 100ms;
+  user-select: none;
+}
+
+.section__head:hover .url-fragment {
+  animation: bounce-out 500ms;
+  animation-delay: 200ms;
+}
+
+.section__head:hover .url-fragment__inner {
+  opacity: 100%;
+}
+
 /* Greeting Animation */
 .greeting-anim__behind {
   display: inline-block;

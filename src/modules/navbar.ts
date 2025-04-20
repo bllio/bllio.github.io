@@ -10,24 +10,19 @@ const setupNavbar = () => {
 
   const handleClick = (event: MouseEvent) => {
     event.preventDefault();
-    const element = event.target as HTMLAnchorElement;
-    const sections = document.querySelectorAll<HTMLElement>('.section');
-    const fragment = element.getAttribute('href');
 
-    if (!fragment) {
-      return;
-    }
+    const element = event.target as HTMLAnchorElement;
+    const fragment = element.getAttribute('href')!;
 
     if (fragment === '/') {
       writeFragmentToUrl('/');
       scrollBackToTop();
+      return;
     }
 
-    for (const section of sections) {
-      const pathname = stripAllForwardSlash(stripAllHash(fragment));
-      if (section.getAttribute('id') !== pathname) {
-        continue;
-      }
+    const pathname = stripAllForwardSlash(stripAllHash(fragment));
+    const section = document.getElementById(pathname);
+    if (section) {
       writeFragmentToUrl(pathname);
       section.scrollIntoView();
     }

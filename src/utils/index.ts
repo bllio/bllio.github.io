@@ -23,9 +23,18 @@ const stripAllHash = (text: string) => {
   return text.replace(/#/g, '');
 };
 
+const scrollBackToTop = () => {
+  const root = document.documentElement;
+  root.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
+
 export {
   writeFragmentToUrl,
   writeToClipboard,
   stripAllForwardSlash,
   stripAllHash,
+  scrollBackToTop,
 };

@@ -1,3 +1,5 @@
+import { scrollBackToTop } from '../utils';
+
 const setupScroll = () => {
   // Scroll back to top button.
   const scrollButton =
@@ -17,11 +19,7 @@ const setupScroll = () => {
   };
 
   const handleClick = () => {
-    const root = document.documentElement;
-    root.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    scrollBackToTop();
   };
 
   const createScrollButtonObserver = () => {

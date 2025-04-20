@@ -1,4 +1,5 @@
 import {
+  scrollBackToTop,
   stripAllForwardSlash,
   stripAllHash,
   writeFragmentToUrl,
@@ -19,11 +20,7 @@ const setupNavbar = () => {
 
     if (fragment === '/') {
       writeFragmentToUrl('/');
-      const root = document.documentElement;
-      root.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
+      scrollBackToTop();
     }
 
     for (const section of sections) {

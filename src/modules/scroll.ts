@@ -1,14 +1,14 @@
 import { scrollBackToTop } from '../utils';
 
-const setupScroll = () => {
+function setupScroll() {
   // Scroll back to top button.
   const scrollButton =
     document.querySelector<HTMLButtonElement>('#scroll-button')!;
 
-  const toggleDisplay = (
+  function toggleDisplay(
     entries: IntersectionObserverEntry[],
     _observer: IntersectionObserver,
-  ) => {
+  ) {
     entries.forEach((entry: IntersectionObserverEntry) => {
       if (entry.isIntersecting) {
         scrollButton.classList.remove('scroll-button--hidden');
@@ -16,20 +16,20 @@ const setupScroll = () => {
         scrollButton.classList.add('scroll-button--hidden');
       }
     });
-  };
+  }
 
-  const handleClick = () => {
+  function handleClick() {
     scrollBackToTop();
-  };
+  }
 
-  const createScrollButtonObserver = () => {
+  function createScrollButtonObserver() {
     let observer;
     observer = new IntersectionObserver(toggleDisplay);
     observer.observe(scrollButton);
-  };
+  }
 
   scrollButton.addEventListener('click', handleClick);
   createScrollButtonObserver();
-};
+}
 
 export { setupScroll };

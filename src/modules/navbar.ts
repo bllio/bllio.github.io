@@ -5,10 +5,10 @@ import {
   writeFragmentToUrl,
 } from '../utils';
 
-const setupNavbar = () => {
+function setupNavbar() {
   const links = document.querySelectorAll<HTMLAnchorElement>('.navbar__link');
 
-  const handleClick = (event: MouseEvent) => {
+  function handleClick(event: MouseEvent) {
     event.preventDefault();
 
     const element = event.target as HTMLAnchorElement;
@@ -26,11 +26,11 @@ const setupNavbar = () => {
       writeFragmentToUrl(pathname);
       section.scrollIntoView();
     }
-  };
+  }
 
   links.forEach((link) => {
     link.addEventListener('click', handleClick);
   });
-};
+}
 
 export { setupNavbar };

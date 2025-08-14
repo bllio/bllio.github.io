@@ -1,6 +1,6 @@
 import { writeToClipboard } from '../utils';
 
-const setupEmail = () => {
+function setupEmail() {
   const obfuscatedEmail = document.querySelector<HTMLParagraphElement>(
     '#contact-email-text',
   )!.innerText;
@@ -19,7 +19,7 @@ const setupEmail = () => {
    *
    * @see https://en.wikipedia.org/wiki/Address_munging.
    */
-  const parseEmailAddress = (email: string) => {
+  function parseEmailAddress(email: string) {
     // We could have used a lookup table and regex as a more elegant approach
     // but in this case, the email address will most likely never have to have
     // a bigger number of obfuscating strings so sticking with this code
@@ -29,12 +29,12 @@ const setupEmail = () => {
     email = email.replace(/\s/g, '');
 
     return email;
-  };
+  }
 
   /**
    * Helper that builds the icon used when copying the email is successful.
    */
-  const buildSuccessIcon = () => {
+  function buildSuccessIcon() {
     // We create the element manually instead of using a Lit template because
     // here it is trivial to do so; we only have one instance of the element
     // and its properties never change.
@@ -49,12 +49,12 @@ const setupEmail = () => {
     icon.innerText = 'check';
 
     return icon;
-  };
+  }
 
   const iconAfter = buildSuccessIcon();
   const actualEmail = parseEmailAddress(obfuscatedEmail);
 
-  const handleClick = async () => {
+  async function handleClick() {
     try {
       writeToClipboard(actualEmail);
       buttonText.innerText = 'Copied';
@@ -69,10 +69,10 @@ const setupEmail = () => {
         console.error(error.message);
       }
     }
-  };
+  }
 
   const copyButton = document.querySelector<HTMLButtonElement>('#copy-button')!;
   copyButton.addEventListener('click', handleClick);
-};
+}
 
 export { setupEmail };

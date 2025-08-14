@@ -5,7 +5,7 @@ import {
   writeFragmentToUrl,
 } from '../utils';
 
-function setupNavbar() {
+export function setupNavbar() {
   const links = document.querySelectorAll<HTMLAnchorElement>('.navbar__link');
 
   function handleClick(event: MouseEvent) {
@@ -32,5 +32,3 @@ function setupNavbar() {
     link.addEventListener('click', handleClick);
   });
 }
-
-export { setupNavbar };

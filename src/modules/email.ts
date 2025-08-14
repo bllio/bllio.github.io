@@ -1,6 +1,6 @@
 import { writeToClipboard } from '../utils';
 
-function setupEmail() {
+export function setupEmail() {
   const obfuscatedEmail = document.querySelector<HTMLParagraphElement>(
     '#contact-email-text',
   )!.innerText;
@@ -74,5 +74,3 @@ function setupEmail() {
   const copyButton = document.querySelector<HTMLButtonElement>('#copy-button')!;
   copyButton.addEventListener('click', handleClick);
 }
-
-export { setupEmail };

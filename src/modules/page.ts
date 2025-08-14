@@ -1,6 +1,6 @@
 import { stripAllForwardSlash } from '../utils';
 
-function setupPage() {
+export function setupPage() {
   /**
    * Helper method to get the fragment from the current URL.
    */
@@ -25,5 +25,3 @@ function setupPage() {
 
   window.addEventListener('load', handleLoad);
 }
-
-export { setupPage };

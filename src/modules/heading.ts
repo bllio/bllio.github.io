@@ -1,6 +1,6 @@
 import { writeFragmentToUrl, writeToClipboard } from '../utils';
 
-function setupHeading() {
+export function setupHeading() {
   async function handleClick(event: MouseEvent) {
     const element = event.target as HTMLHeadingElement;
     const section = element.parentElement!;
@@ -16,5 +16,3 @@ function setupHeading() {
     heading.addEventListener('click', handleClick);
   }
 }
-
-export { setupHeading };

@@ -1,6 +1,6 @@
 import { scrollBackToTop } from '../utils';
 
-function setupScroll() {
+export function setupScroll() {
   // Scroll back to top button.
   const scrollButton =
     document.querySelector<HTMLButtonElement>('#scroll-button')!;
@@ -31,5 +31,3 @@ function setupScroll() {
   scrollButton.addEventListener('click', handleClick);
   createScrollButtonObserver();
 }
-
-export { setupScroll };

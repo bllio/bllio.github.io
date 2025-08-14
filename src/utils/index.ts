@@ -1,11 +1,11 @@
 /**
  * Appends `fragment` to the current URL.
  */
-const writeFragmentToUrl = (fragment: string) => {
+export function writeFragmentToUrl(fragment: string) {
   history.pushState(null, '', fragment);
-};
+}
 
-const writeToClipboard = async (text: string) => {
+export async function writeToClipboard(text: string) {
   try {
     await navigator.clipboard.writeText(text);
   } catch (error) {
@@ -13,28 +13,20 @@ const writeToClipboard = async (text: string) => {
       console.error(error.message);
     }
   }
-};
+}
 
-const stripAllForwardSlash = (text: string) => {
+export function stripAllForwardSlash(text: string) {
   return text.replace(/\//g, '');
-};
+}
 
-const stripAllHash = (text: string) => {
+export function stripAllHash(text: string) {
   return text.replace(/#/g, '');
-};
+}
 
-const scrollBackToTop = () => {
+export function scrollBackToTop() {
   const root = document.documentElement;
   root.scrollTo({
     top: 0,
     behavior: 'smooth',
   });
-};
-
-export {
-  writeFragmentToUrl,
-  writeToClipboard,
-  stripAllForwardSlash,
-  stripAllHash,
-  scrollBackToTop,
-};
+}

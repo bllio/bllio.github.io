@@ -1,4 +1,4 @@
-import { writeToClipboard } from '../utils';
+import { writeToClipboard } from '../utils/writeToClipboard';
 
 export function setupEmail() {
   const obfuscatedEmail = document.querySelector<HTMLParagraphElement>(

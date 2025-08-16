@@ -1,9 +1,9 @@
+import { scrollBackToTop } from '../utils/scrollBackToTop';
 import {
-  scrollBackToTop,
   stripAllForwardSlash,
   stripAllHash,
   writeFragmentToUrl,
-} from '../utils';
+} from '../utils/url';
 
 export function setupNavbar() {
   const links = document.querySelectorAll<HTMLAnchorElement>('.navbar__link');

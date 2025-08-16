@@ -1,4 +1,4 @@
-import { stripAllForwardSlash } from '../utils';
+import { stripAllForwardSlash } from '../utils/url';
 
 export function setupPage() {
   /**

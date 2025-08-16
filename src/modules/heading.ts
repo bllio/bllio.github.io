@@ -1,4 +1,5 @@
-import { writeFragmentToUrl, writeToClipboard } from '../utils';
+import { writeFragmentToUrl } from '../utils/url';
+import { writeToClipboard } from '../utils/writeToClipboard';
 
 export function setupHeading() {
   async function handleClick(event: MouseEvent) {

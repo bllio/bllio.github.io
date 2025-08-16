@@ -1,4 +1,4 @@
-import { scrollBackToTop } from '../utils';
+import { scrollBackToTop } from '../utils/scrollBackToTop';
 
 export function setupScroll() {
   // Scroll back to top button.

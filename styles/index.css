@@ -50,11 +50,23 @@
   --font-code: var(--play);
 
   /* Sizing */
-  --text-xs: 16px;
-  --text-sm: 18px;
-  --text-md: 20px;
-  --text-lg: 36px;
-  --text-xl: 72px;
+  /*
+    NOTE:
+    In most major browsers, the base font size is at 16px by default. Using
+    the rem unit for font sizes and basing them off the base size helps with
+    consistency and acessibility since it works well with users who change
+    their browser's font size. It also works better with this site's existing
+    layout as media query breakpoints are added later.
+
+    References:
+    - https://css-tricks.com/accessible-font-sizing-explained/
+    - https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/
+   */
+  --text-xs: calc(16rem / 16);
+  --text-sm: calc(18rem / 16);
+  --text-md: calc(20rem / 16);
+  --text-lg: calc(36rem / 16);
+  --text-xl: calc(72rem / 16);
 
   --text-base: var(--text-sm);
   --text-inner: var(--text-xs);
@@ -171,7 +183,7 @@ html {
 
 /* Navigation Bar */
 .navbar {
-  width: 30%;
+  width: 350px;
 }
 
 .navbar__list {
@@ -287,7 +299,7 @@ html {
   font-size: var(--text-head);
   margin-bottom: var(--space-lg);
   transition: color 150ms ease-out;
-  width: 25%;
+  width: 300px;
 }
 
 .section__head:hover {
@@ -480,5 +492,287 @@ html {
   }
   100% {
     transform: scale(100%);
+  }
+}
+
+/* Media Queries */
+/*
+  NOTE:
+  On Windows 11, under System > Display > Scale & layout > Scale, if
+  the value is set to 125%, the media queries seem to not work inclusively
+  at certain breakpoints. Could not find a fix for this other than changing
+  the scale to 100% (yeah no), but this should not affect the final result,
+  though it is annoying during development.
+
+  Related:
+  - https://stackoverflow.com/questions/56842906/media-query-max-width-not-working-inclusively#comment114636557_56843409.
+*/
+@media screen and (width <= 360px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .text-wall {
+    inline-size: 36ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 310px;
+  }
+
+  .contact-email__text {
+    font-size: var(--text-sm);
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (361px <= width <= 400px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .text-wall {
+    inline-size: 36ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 310px;
+  }
+
+  .contact-email__text {
+    font-size: var(--text-sm);
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (401px <= width <= 480px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .text-wall {
+    inline-size: 40ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 90%;
+  }
+
+  .contact-email__text {
+    font-size: var(--text-sm);
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (481px <= width <= 508px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .text-wall {
+    inline-size: 40ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 90%;
+  }
+
+  .contact-email__text {
+    font-size: var(--text-sm);
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (508px <= width <= 540px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .text-wall {
+    inline-size: 50ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 350px;
+  }
+
+  .contact-email__text {
+    font-size: var(--text-sm);
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (541px <= width <= 600px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .text-wall {
+    inline-size: 50ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 90%;
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (601px <= width <= 750px) {
+  .text-wall {
+    inline-size: 55ch;
+  }
+}
+
+@media screen and (751px <= width <= 900px) {
+  .text-wall {
+    inline-size: 65ch;
   }
 }

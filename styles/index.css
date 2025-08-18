@@ -345,7 +345,7 @@ html {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: var(--space-7xl);
+  margin-top: var(--space-3xl);
   text-align: center;
 }
 
@@ -438,49 +438,6 @@ html {
   font-family: var(--font-copy);
   font-size: var(--text-inner);
   user-select: none;
-}
-
-/* Scroll-To-Top Button */
-.scroll-button {
-  background-color: var(--color-button);
-  border: none;
-  border-bottom: solid var(--border-size-base) var(--color-button-border);
-  border-radius: var(--border-corners);
-  border-right: solid var(--border-size-base) var(--color-button-border);
-  box-shadow: var(--shadow-base);
-  cursor: pointer;
-  display: inline-block;
-  height: 80px;
-  padding: var(--space-xl) var(--space-xl);
-  position: absolute;
-  right: var(--space-8xl);
-  transform: translateY(0);
-  transition:
-    filter 150ms ease-out,
-    transform 250ms ease-out;
-  visibility: visible;
-  width: 80px;
-}
-
-.scroll-button:hover {
-  filter: brightness(120%);
-}
-
-.scroll-button--hidden {
-  transform: translateY(30%);
-  transition-delay: 100ms;
-  visibility: hidden;
-}
-
-.scroll-button__icon {
-  color: var(--color-ink-secondary);
-  display: inline-block;
-  user-select: none;
-}
-
-.scroll-button:hover .scroll-button__icon {
-  animation: bounce-up 600ms;
-  animation-delay: 100ms;
 }
 
 /* Animations */

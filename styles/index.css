@@ -50,11 +50,23 @@
   --font-code: var(--play);
 
   /* Sizing */
-  --text-xs: 16px;
-  --text-sm: 18px;
-  --text-md: 20px;
-  --text-lg: 36px;
-  --text-xl: 72px;
+  /*
+    NOTE:
+    In most major browsers, the base font size is at 16px by default. Using
+    the rem unit for font sizes and basing them off the base size helps with
+    consistency and acessibility since it works well with users who change
+    their browser's font size. It also works better with this site's existing
+    layout as media query breakpoints are added later.
+
+    References:
+    - https://css-tricks.com/accessible-font-sizing-explained/
+    - https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/
+   */
+  --text-xs: calc(16rem / 16);
+  --text-sm: calc(18rem / 16);
+  --text-md: calc(20rem / 16);
+  --text-lg: calc(36rem / 16);
+  --text-xl: calc(72rem / 16);
 
   --text-base: var(--text-sm);
   --text-inner: var(--text-xs);

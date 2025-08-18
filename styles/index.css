@@ -494,3 +494,285 @@ html {
     transform: scale(100%);
   }
 }
+
+/* Media Queries */
+/*
+  NOTE:
+  On Windows 11, under System > Display > Scale & layout > Scale, if
+  the value is set to 125%, the media queries seem to not work inclusively
+  at certain breakpoints. Could not find a fix for this other than changing
+  the scale to 100% (yeah no), but this should not affect the final result,
+  though it is annoying during development.
+
+  Related:
+  - https://stackoverflow.com/questions/56842906/media-query-max-width-not-working-inclusively#comment114636557_56843409.
+*/
+@media screen and (width <= 360px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .text-wall {
+    inline-size: 36ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 310px;
+  }
+
+  .contact-email__text {
+    font-size: var(--text-sm);
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (361px <= width <= 400px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .text-wall {
+    inline-size: 36ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 310px;
+  }
+
+  .contact-email__text {
+    font-size: var(--text-sm);
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (401px <= width <= 480px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .text-wall {
+    inline-size: 40ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 90%;
+  }
+
+  .contact-email__text {
+    font-size: var(--text-sm);
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (481px <= width <= 508px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .text-wall {
+    inline-size: 40ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 90%;
+  }
+
+  .contact-email__text {
+    font-size: var(--text-sm);
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (508px <= width <= 540px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .text-wall {
+    inline-size: 50ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 350px;
+  }
+
+  .contact-email__text {
+    font-size: var(--text-sm);
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (541px <= width <= 600px) {
+  .page {
+    min-width: fit-content;
+  }
+
+  .text-wall {
+    inline-size: 50ch;
+  }
+
+  .separator-line {
+    width: 80%;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6xl);
+  }
+
+  .contact-email {
+    height: 80px;
+    padding: var(--space-sm);
+    width: 90%;
+  }
+
+  .copy-button {
+    justify-content: center;
+    width: 20%;
+  }
+
+  .copy-button__text {
+    display: none;
+  }
+
+  .copy-button__icon {
+    margin-right: 0;
+  }
+}
+
+@media screen and (601px <= width <= 750px) {
+  .text-wall {
+    inline-size: 55ch;
+  }
+}
+
+@media screen and (751px <= width <= 900px) {
+  .text-wall {
+    inline-size: 65ch;
+  }
+}
